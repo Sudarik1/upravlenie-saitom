@@ -12,7 +12,7 @@ const Motto = () => {
     useEffect( () => {
         const fetchMotto = async () => {
             try{
-                const res = await fetch('http://localhost:8000/api/motto/')
+                const res = await fetch('https://gumastro-server.onrender.com/api/motto/')
                 const data = await res.json()
                 setMotto(data)
             }
@@ -36,7 +36,7 @@ const Motto = () => {
 
         const updateMotto = async(mottoId, updatedMotto) => {
             try{
-                const res = await fetch('http://localhost:8000/api/motto/', {
+                const res = await fetch('https://gumastro-server.onrender.com/api/motto/', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

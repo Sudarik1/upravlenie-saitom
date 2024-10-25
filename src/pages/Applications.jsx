@@ -8,7 +8,7 @@ const Applications = () => {
     useEffect( () => {
         const fetchApplications = async () => {
             try {
-                const res = await fetch('http://localhost:8000/api/application/')
+                const res = await fetch('https://gumastro-server.onrender.com/api/application/')
                 const data = await res.json()
                 setApplications(data)
             }

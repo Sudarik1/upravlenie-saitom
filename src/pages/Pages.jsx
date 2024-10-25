@@ -13,7 +13,7 @@ const Pages = () => {
     useEffect( () => {
         const fetchPages = async () => {
             try {
-                const res = await fetch('http://localhost:8000/api/page/')
+                const res = await fetch('https://gumastro-server.onrender.com/api/page/')
                 const data = await res.json()
                 setPages(data)
             }
@@ -35,7 +35,7 @@ const Pages = () => {
 
         const updateTitle = async (pageId, updatedTitle) => {
             try {
-                const res = await fetch('http://localhost:8000/api/page/', {
+                const res = await fetch('https://gumastro-server.onrender.com/api/page/', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const Pages = () => {
 
         const updateContent = async (pageId, updatedContent) => {
             try {
-                const res = await fetch('http://localhost:8000/api/page/', {
+                const res = await fetch('https://gumastro-server.onrender.com/api/page/', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

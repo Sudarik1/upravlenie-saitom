@@ -13,7 +13,7 @@ const Notes = () => {
     useEffect( () => {
         const fetchNotes = async () => {
             try {
-                const res = await fetch('http://localhost:8000/api/note/')
+                const res = await fetch('https://gumastro-server.onrender.com/api/note/')
                 const data = await res.json()
                 setNotes(data)
             }
@@ -35,7 +35,7 @@ const Notes = () => {
 
         const updateTitle = async (pageId, updatedTitle) => {
             try {
-                const res = await fetch('http://localhost:8000/api/note/', {
+                const res = await fetch('https://gumastro-server.onrender.com/api/note/', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const Notes = () => {
 
         const updateBody = async (pageId, updatedContent) => {
             try {
-                const res = await fetch('http://localhost:8000/api/note/', {
+                const res = await fetch('https://gumastro-server.onrender.com/api/note/', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

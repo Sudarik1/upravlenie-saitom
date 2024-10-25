@@ -10,7 +10,7 @@ const Comments = () => {
     useEffect( () => {
         const fetchComments = async () => {
             try {
-                const res = await fetch('http://localhost:8000/api/comment/')
+                const res = await fetch('https://gumastro-server.onrender.com/api/comment/')
                 const data = await res.json()
                 setComments(data)
             }
@@ -30,7 +30,7 @@ const Comments = () => {
 
         const deleteComment = async (commentId) => {
             try {
-                const res = await fetch('http://localhost:8000/api/comment/', {
+                const res = await fetch('https://gumastro-server.onrender.com/api/comment/', {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
