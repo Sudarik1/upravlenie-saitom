@@ -1,0 +1,70 @@
+
+.font--bold{
+    font-weight: bold;
+}
+
+.line{
+    height: 5px; 
+    background-color: black;  
+    border: none; 
+}
+
+/* set up */
+
+body{
+    margin: 0;
+    
+    text-align: center;
+}
+
+.page,
+.page__nav,
+.page__content{
+    display: flex;
+}
+
+.page{
+    gap: 4em;
+}
+
+.page__nav{
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    gap: 2em;
+
+    font-size: 1.25em;
+}
+
+.page__nav__link{
+    text-decoration: none;
+
+    color: blue;
+
+    font-weight: bold;
+}
+
+.page__nav__link--active{
+    color: red;
+}
+
+.page__content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.page__content--separate{
+    margin: 50px 0;
+}
+
+.page__content__btn-update{
+    color: blue;
+}
+
+.page__content__btn-delete{
+    color: red;
+}
