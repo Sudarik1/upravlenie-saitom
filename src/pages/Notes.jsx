@@ -25,7 +25,7 @@ const Notes = () => {
         fetchNotes()
     },[])
 
-    const updateTitleHandler = (e, pageId) => {
+    const updateTitleHandler = (e, noteId) => {
 
         e.preventDefault();
         const confirm = window.confirm('Уверен, что хочешь обновить название заметки?')
@@ -33,7 +33,7 @@ const Notes = () => {
             return
         }
 
-        const updateTitle = async (pageId, updatedTitle) => {
+        const updateTitle = async (noteId, updatedTitle) => {
             try {
                 const res = await fetch('https://gumastro-server.onrender.com/api/note/', {
                     method: 'PUT',
@@ -41,7 +41,7 @@ const Notes = () => {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        _id:pageId,
+                        _id:noteId,
                         title: updatedTitle                    
                     })
                 })
@@ -51,10 +51,10 @@ const Notes = () => {
             }
         }
 
-        updateTitle(pageId, updatedTitle)
+        updateTitle(noteId, updatedTitle)
     }
 
-    const updateBodyHandler = (e, pageId) => {
+    const updateBodyHandler = (e, noteId) => {
 
         e.preventDefault();
         const confirm = window.confirm('Уверен, что хочешь обновить текст заметки?')
@@ -62,7 +62,7 @@ const Notes = () => {
             return
         }
 
-        const updateBody = async (pageId, updatedContent) => {
+        const updateBody = async (noteId, updatedBody) => {
             try {
                 const res = await fetch('https://gumastro-server.onrender.com/api/note/', {
                     method: 'PUT',
@@ -70,7 +70,7 @@ const Notes = () => {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        _id:pageId,
+                        _id:noteId,
                         body: updatedBody                    
                     })
                 })
@@ -80,7 +80,7 @@ const Notes = () => {
             }
         }
 
-        updateBody(pageId, updatedBody)
+        updateBody(noteId, updatedBody)
     }
 
     return (
